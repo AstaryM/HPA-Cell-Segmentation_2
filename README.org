@@ -1,4 +1,4 @@
-* HPA-Cell-Segmentation
+* HPA-Cell-Segmentation_2
 Tools for running cell segmentation using pretrained U-Nets.
 
 1. The =cellsegmentator= module which implements a class
@@ -12,7 +12,7 @@ Tools for running cell segmentation using pretrained U-Nets.
 The following steps will install =hpacellseg= to your local =pip=
 installations folder together with all necessary dependencies.
 
-- =git clone https://github.com/CellProfiling/HPA-Cell-Segmentation.git=
+- =git clone https://github.com/CellProfiling/HPA-Cell-Segmentation_2.git=
 - =cd HPA-Cell-Segmentation=
 - =sh install.sh=
 
