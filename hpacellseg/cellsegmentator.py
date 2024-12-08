@@ -201,7 +201,7 @@ class CellSegmentator(object):
             self.target_shape = image.shape
             if len(image.shape) == 2:
                 image = np.dstack((image, image, image))
-            image = transform.rescale(image, self.scale_factor, multichannel=True)
+            image = transform.rescale(image, self.scale_factor, channel_axis=-1)
             nuc_image = np.dstack((image[..., 2], image[..., 2], image[..., 2]))
             if self.padding:
                 rows, cols = nuc_image.shape[:2]
