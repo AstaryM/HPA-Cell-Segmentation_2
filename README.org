@@ -13,7 +13,7 @@ The following steps will install =hpacellseg= to your local =pip=
 installations folder together with all necessary dependencies.
 
 - =git clone https://github.com/CellProfiling/HPA-Cell-Segmentation_2.git=
-- =cd HPA-Cell-Segmentation=
+- =cd HPA-Cell-Segmentation_2=
 - =sh install.sh=
 
 You can verify the installation has worked by running
