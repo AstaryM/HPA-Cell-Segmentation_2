@@ -15,7 +15,8 @@ from hpacellseg.constants import (MULTI_CHANNEL_CELL_MODEL_URL,
 from hpacellseg.utils import download_with_url
 
 NORMALIZE = {"mean": [124 / 255, 117 / 255, 104 / 255], "std": [1 / (0.0167 * 255)] * 3}
-
+def googoogaga():
+  print("googoogaga")
 
 class CellSegmentator(object):
     """Uses pretrained DPN-Unet models to segment cells from images."""
