@@ -290,8 +290,10 @@ class CellSegmentator(object):
 
         def _preprocess(image):
             self.target_shape = image.shape
+            if len(image.shape) == 2:
+                image = np.dstack((image, image, image))
             if not len(image.shape) == 3:
-                raise ValueError("image should has 3 channels")
+                raise ValueError(f"image should has 3 channels {len(image.shape)}, {image.shape=}")
             cell_image = transform.rescale(image, self.scale_factor, channel_axis=-1)
             if self.padding:
                 rows, cols = cell_image.shape[:2]
