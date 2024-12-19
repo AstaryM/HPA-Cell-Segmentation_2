@@ -321,6 +321,7 @@ class CellSegmentator(object):
 
         if not precombined:
             images = self._image_conversion(images)
+        print(f"phase -1: {np.shape(images)}")
         preprocessed_imgs = list(map(_preprocess, images))
         print(f"phase 0: {np.shape(preprocessed_imgs)}")
         predictions = list(map(lambda x: _segment_helper([x]), preprocessed_imgs))
