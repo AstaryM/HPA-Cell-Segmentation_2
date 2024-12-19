@@ -231,7 +231,7 @@ class CellSegmentator(object):
                 return imgs
 
         preprocessed_imgs = map(_preprocess, images)
-        predictions = map(lambda x: _segment_helper([x]), preprocessed_imgs)
+        predictions = list(map(lambda x: _segment_helper([x]), preprocessed_imgs))
         print("phase 1: " + predictions.shape())
         predictions = map(lambda x: x.to("cpu").numpy()[0], predictions)
         print("phase 2: " + predictions.shape())
