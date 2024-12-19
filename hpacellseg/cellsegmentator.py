@@ -232,7 +232,9 @@ class CellSegmentator(object):
 
         preprocessed_imgs = map(_preprocess, images)
         predictions = map(lambda x: _segment_helper([x]), preprocessed_imgs)
+        print("phase 1: " + predictions.shape())
         predictions = map(lambda x: x.to("cpu").numpy()[0], predictions)
+        print("phase 2: " + predictions.shape())
         predictions = map(util.img_as_ubyte, predictions)
         predictions = list(map(self._restore_scaling_padding, predictions))
         return predictions
