@@ -290,7 +290,7 @@ class CellSegmentator(object):
             self.target_shape = image.shape
             if not len(image.shape) == 3:
                 raise ValueError("image should has 3 channels")
-            cell_image = transform.rescale(image, self.scale_factor, multichannel=True)
+            cell_image = transform.rescale(image, self.scale_factor, channel_axis=-1)
             if self.padding:
                 rows, cols = cell_image.shape[:2]
                 self.scaled_shape = rows, cols
